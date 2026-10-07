@@ -564,11 +564,34 @@ p {
   color: var(--color-gold);
 }
 
-.properties-disclaimer {
-  font-size: 0.875rem;
+.properties-coming-soon {
+  margin-top: 1.75rem;
+  padding: 2.5rem 2rem;
+  background: linear-gradient(135deg, var(--color-cream) 0%, #f8f4ec 100%);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 24px rgba(12, 35, 64, 0.06);
+  max-width: 44rem;
+}
+
+.properties-coming-soon p {
   color: var(--color-ink-soft);
-  margin-bottom: 2rem;
-  max-width: 42rem;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
+
+.properties-coming-soon-lead {
+  color: var(--color-ink) !important;
+  font-size: 1.125rem !important;
+}
+
+.properties-coming-soon-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem 1.75rem;
+  margin-top: 1.75rem;
 }
 
 .properties-grid {
