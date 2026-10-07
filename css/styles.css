@@ -285,7 +285,7 @@ p {
   justify-content: center;
   padding: calc(var(--header-h) + 2rem) 1rem 7rem;
   background: var(--color-navy-deep) center / cover no-repeat;
-  background-image: url("../images/hero.jpg");
+  background-image: url("../images/hero-luxury.jpg");
 }
 
 .hero::after {
@@ -773,7 +773,7 @@ p {
   background: var(--color-navy) center / cover no-repeat;
   background-image:
     linear-gradient(105deg, rgba(12, 35, 64, 0.92) 0%, rgba(12, 35, 64, 0.78) 55%, rgba(12, 35, 64, 0.65) 100%),
-    url("../images/hero.jpg");
+    url("../images/cta-architecture.jpg");
   color: rgba(255, 255, 255, 0.9);
   text-align: center;
 }
