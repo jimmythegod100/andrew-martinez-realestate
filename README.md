@@ -18,7 +18,7 @@ python3 -m http.server 8765
 
 ## Contact form
 
-FormSubmit → `andrewjamesmartinez91@gmail.com`. First submission triggers FormSubmit activation at that inbox.
+FormSubmit → `andrew.martinez.re@gmail.com`. First submission triggers FormSubmit activation at that inbox.
 
 ## Custom domain
 

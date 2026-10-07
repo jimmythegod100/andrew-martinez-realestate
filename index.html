@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Andrew Martinez | REeBroker Group — Modesto &amp; Central Valley Real Estate</title>
-  <meta name="description" content="Licensed California real estate salesperson Andrew Martinez with REeBroker Group. Buy, sell, and listing guidance in Modesto and the Central Valley.">
+  <meta name="description" content="Licensed California real estate salesperson Andrew Martinez with REeBroker Group. Buy, sell, and rent guidance in Modesto and the Central Valley.">
   <meta name="author" content="Andrew Martinez">
   <link rel="canonical" href="https://www.andrew-martinez-realestate.com/">
   <meta property="og:type" content="website">
@@ -19,7 +19,7 @@
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Great+Vibes&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -31,10 +31,11 @@
         <svg class="logo-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
           <path d="M4 14L16 4l12 10v14H4V14z" stroke="currentColor" stroke-width="1.5" fill="none"/>
           <rect x="11" y="17" width="10" height="11" stroke="currentColor" stroke-width="1.2" fill="none"/>
-          <line x1="16" y1="17" x2="16" y2="28" stroke="currentColor" stroke-width="0.9"/>
-          <line x1="11" y1="22.5" x2="21" y2="22.5" stroke="currentColor" stroke-width="0.9"/>
         </svg>
-        <span class="logo-text">REeBroker Group<span>Andrew Martinez</span></span>
+        <span class="logo-text">
+          Andrew Martinez
+          <span class="logo-tagline">Buy · Sell · Rent</span>
+        </span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -43,11 +44,12 @@
       </button>
       <nav>
         <ul class="site-nav" id="site-nav">
+          <li><a href="#top">Home</a></li>
+          <li><a href="#properties">Properties</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#valuation">Valuation</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a class="nav-cta" href="#contact">Get in touch</a></li>
+          <li><a class="nav-cta" href="#contact">Get Started →</a></li>
         </ul>
       </nav>
     </div>
@@ -55,36 +57,175 @@
 
   <main id="main">
     <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero-content">
-        <p class="hero-eyebrow">
-          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
-            <path d="M4 14L16 4l12 10v14H4V14z" stroke="currentColor" stroke-width="1.5"/>
-            <rect x="11" y="17" width="10" height="11" stroke="currentColor" stroke-width="1.2"/>
-          </svg>
-          REeBroker Group
-        </p>
-        <h1 id="hero-heading">Andrew Martinez</h1>
-        <p class="hero-tagline">Licensed California real estate salesperson serving Modesto, Stanislaus County, and the Central Valley — clear guidance for buyers and sellers.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact">Contact Andrew</a>
-          <a class="btn btn-outline" href="#valuation">Free home valuation</a>
-        </div>
+      <div class="hero-inner">
+        <p class="hero-eyebrow">Premium properties · Central Valley living</p>
+        <h1 id="hero-heading">
+          Find Your Dream Home
+          <span class="hero-script">with Andrew</span>
+        </h1>
+        <p class="hero-tagline">Licensed California salesperson with REeBroker Group — modern homes, established neighborhoods, and clear guidance across Modesto and the Central Valley.</p>
+      </div>
+      <form class="hero-search" id="hero-search" role="search" aria-label="Search sample listings">
+        <label class="hero-search-field">
+          <span class="hero-search-label">Location</span>
+          <select name="location" id="search-location">
+            <option value="">Any area</option>
+            <option value="modesto">Modesto, CA</option>
+            <option value="turlock">Turlock, CA</option>
+            <option value="central-valley">Central Valley</option>
+          </select>
+        </label>
+        <label class="hero-search-field">
+          <span class="hero-search-label">Property type</span>
+          <select name="type" id="search-type">
+            <option value="">Any type</option>
+            <option value="sale">For sale</option>
+            <option value="rent">For rent</option>
+          </select>
+        </label>
+        <label class="hero-search-field">
+          <span class="hero-search-label">Budget</span>
+          <select name="budget" id="search-budget">
+            <option value="">Any budget</option>
+            <option value="under-500">Under $500K</option>
+            <option value="500-700">$500K – $700K</option>
+            <option value="rent">Under $3K/mo rent</option>
+          </select>
+        </label>
+        <button class="btn btn-navy hero-search-btn" type="submit">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>
+          Search
+        </button>
+      </form>
+    </section>
+
+    <section class="highlights" aria-labelledby="highlights-heading">
+      <h2 id="highlights-heading" class="visually-hidden">Why work with Andrew</h2>
+      <div class="highlights-grid">
+        <article class="highlight-card">
+          <div class="highlight-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 10.5L12 3l9 7.5V21H3V10.5z"/><path d="M9 21V12h6v9"/></svg>
+          </div>
+          <h3>Verified Listings</h3>
+          <p>MLS-backed search guidance and transparent listing details — no mystery inventory.</p>
+        </article>
+        <article class="highlight-card">
+          <div class="highlight-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l7 4v5c0 5-3.5 9-7 10-3.5-1-7-5-7-10V7l7-4z"/></svg>
+          </div>
+          <h3>Trusted &amp; Secure</h3>
+          <p>California-licensed salesperson (DRE #02446227) affiliated with REeBroker Group.</p>
+        </article>
+        <article class="highlight-card">
+          <div class="highlight-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 14a8 8 0 0116 0v4H4v-4z"/><path d="M12 14v3"/><path d="M8 21h8"/></svg>
+          </div>
+          <h3>Expert Support</h3>
+          <p>Direct communication from first showing through closing — questions answered in plain language.</p>
+        </article>
+        <article class="highlight-card">
+          <div class="highlight-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20s-6-4.5-6-10a4 4 0 017-2.5A4 4 0 0118 10c0 5.5-6 10-6 10z"/></svg>
+          </div>
+          <h3>Better Living</h3>
+          <p>Focus on the right fit for your budget, commute, and long-term goals — not pressure tactics.</p>
+        </article>
       </div>
     </section>
 
-    <section class="section" id="about" aria-labelledby="about-heading">
+    <section class="section properties-section" id="properties" aria-labelledby="properties-heading">
       <div class="section-inner">
-        <p class="section-label">About</p>
-        <h2 id="about-heading">Your neighbor in Modesto &amp; the Central Valley</h2>
-        <div class="about-grid">
+        <div class="section-head-row">
           <div>
-            <p class="section-intro">Andrew Martinez is a licensed California salesperson affiliated with <strong>REeBroker Group</strong>, operated by Real Estate Ebroker Inc. Whether you are buying your first home, relocating to the Valley, or preparing to list, Andrew focuses on straightforward communication, local market context, and a process you can follow with confidence.</p>
-            <p>Andrew serves buyers and sellers throughout <strong>Modesto</strong>, surrounding Stanislaus County communities, and the wider Central Valley. No inflated claims — just honest representation aligned with California real estate law and your goals.</p>
+            <p class="section-label">Featured properties</p>
+            <h2 id="properties-heading">Handpicked homes for you</h2>
           </div>
-          <blockquote class="about-highlight">
-            “Real estate is a major life decision. My job is to help you understand your options, timelines, and next steps — without pressure or hype.”
-            <footer>— Andrew Martinez, DRE #02446227</footer>
-          </blockquote>
+          <a class="text-link" href="#contact">View all properties →</a>
+        </div>
+        <p class="properties-disclaimer">Sample listings for layout only — not active inventory. Contact Andrew for current availability in Modesto and the Central Valley.</p>
+        <div class="properties-grid" id="properties-grid">
+          <article class="property-card" data-location="modesto" data-type="sale" data-budget="500-700">
+            <div class="property-media">
+              <img src="images/hero.jpg" alt="Illustrative modern home exterior" width="640" height="420" loading="lazy">
+              <span class="property-badge">For Sale</span>
+            </div>
+            <div class="property-body">
+              <h3>Valley Ranch Estate</h3>
+              <p class="property-location">Modesto, CA</p>
+              <ul class="property-specs">
+                <li>4 Beds</li>
+                <li>3 Baths</li>
+                <li>2,400 sq ft</li>
+              </ul>
+              <p class="property-price">$649,000</p>
+            </div>
+          </article>
+          <article class="property-card" data-location="modesto" data-type="rent" data-budget="rent">
+            <div class="property-media">
+              <img src="images/og-image.jpg" alt="Illustrative downtown-style residence" width="640" height="420" loading="lazy">
+              <span class="property-badge badge-rent">For Rent</span>
+            </div>
+            <div class="property-body">
+              <h3>Downtown Loft Living</h3>
+              <p class="property-location">Modesto, CA</p>
+              <ul class="property-specs">
+                <li>2 Beds</li>
+                <li>2 Baths</li>
+                <li>1,100 sq ft</li>
+              </ul>
+              <p class="property-price">$2,450<span>/mo</span></p>
+            </div>
+          </article>
+          <article class="property-card" data-location="turlock" data-type="sale" data-budget="500-700">
+            <div class="property-media">
+              <img src="images/hero.jpg" alt="Illustrative Central Valley contemporary home" width="640" height="420" loading="lazy">
+              <span class="property-badge">For Sale</span>
+            </div>
+            <div class="property-body">
+              <h3>Central Valley Contemporary</h3>
+              <p class="property-location">Turlock, CA</p>
+              <ul class="property-specs">
+                <li>3 Beds</li>
+                <li>2 Baths</li>
+                <li>1,850 sq ft</li>
+              </ul>
+              <p class="property-price">$525,000</p>
+            </div>
+          </article>
+        </div>
+        <p class="properties-empty" id="properties-empty" hidden>No sample listings match those filters. <a href="#contact">Contact Andrew</a> for a personalized search.</p>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about" aria-labelledby="about-heading">
+      <div class="section-inner about-split">
+        <div class="about-visual">
+          <img src="images/og-image.jpg" alt="Bright modern living space" width="720" height="540" loading="lazy">
+          <p class="about-overlay-script">More Than Just a Home</p>
+        </div>
+        <div class="about-copy">
+          <p class="section-label">Why choose Andrew</p>
+          <h2 id="about-heading">More than properties.<br>We build your next chapter.</h2>
+          <p>Andrew Martinez is a licensed California salesperson with <strong>REeBroker Group</strong> (Real Estate Ebroker Inc). He serves buyers and sellers in <strong>Modesto</strong>, Stanislaus County, and the wider Central Valley with straightforward advice — no inflated claims or fake success metrics.</p>
+          <p>Whether you are purchasing your first home, relocating to the Valley, or preparing to list, Andrew explains timelines, comparables, and brokerage requirements so you can decide with confidence.</p>
+          <ul class="about-facts">
+            <li>
+              <strong>Licensed salesperson</strong>
+              California DRE #02446227 — verify at the Department of Real Estate.
+            </li>
+            <li>
+              <strong>Local focus</strong>
+              Modesto &amp; Central Valley neighborhoods, schools, and commute patterns.
+            </li>
+            <li>
+              <strong>Brokerage oversight</strong>
+              Transactions conducted through Real Estate Ebroker Inc (DRE #01522411).
+            </li>
+            <li>
+              <strong>Honest representation</strong>
+              Equal Housing Opportunity. Not legal or tax advice.
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -93,45 +234,48 @@
       <div class="section-inner">
         <p class="section-label">Services</p>
         <h2 id="services-heading">How Andrew can help</h2>
-        <p class="section-intro">Straightforward support for common real estate needs in the Central Valley. Specific outcomes depend on your situation, market conditions, and lender requirements.</p>
+        <p class="section-intro">Straightforward support for common real estate needs. Outcomes depend on your situation, market conditions, and lender requirements.</p>
         <div class="services-grid">
           <article class="service-item">
             <h3>Buy a home</h3>
-            <p>Search guidance, showing coordination, offer strategy, and transaction milestones explained in plain language — from pre-approval through closing.</p>
+            <p>Search guidance, showings, offer strategy, and milestone updates from pre-approval through closing.</p>
           </article>
           <article class="service-item">
             <h3>Sell your home</h3>
-            <p>Listing preparation, pricing conversation based on comparable sales, marketing through the brokerage’s channels, and negotiation support through escrow.</p>
+            <p>Listing prep, pricing based on comparables, marketing through brokerage channels, and negotiation through escrow.</p>
           </article>
           <article class="service-item">
-            <h3>Listing consultation</h3>
-            <p>Not ready to list yet? Request a no-obligation conversation about condition, timing, and what to expect before you go on market.</p>
+            <h3>Rent &amp; relocate</h3>
+            <p>Lease guidance and relocation conversations for Central Valley moves — clear expectations on deposits, screening, and timing.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="cta-band" id="valuation" aria-labelledby="valuation-heading">
-      <h2 id="valuation-heading">Request a free home valuation</h2>
-      <p>Share your property address and goals. Andrew will follow up to discuss comparable sales, condition, and realistic next steps — not an automated guess.</p>
-      <a class="btn btn-primary" href="#contact">Start your valuation request</a>
+    <section class="cta-banner" aria-labelledby="cta-heading">
+      <div class="cta-banner-inner">
+        <p class="cta-eyebrow">Ready to find your perfect home?</p>
+        <h2 id="cta-heading">Let&apos;s make it happen</h2>
+        <p>Take the first step — share your goals and Andrew will follow up with realistic next steps.</p>
+        <a class="btn btn-white" href="#contact">Get Started →</a>
+      </div>
     </section>
 
-    <section class="section" id="contact" aria-labelledby="contact-heading">
+    <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
       <div class="section-inner">
         <p class="section-label">Contact</p>
-        <h2 id="contact-heading">Let’s talk about your move</h2>
+        <h2 id="contact-heading">Let&apos;s talk about your move</h2>
         <div class="contact-grid">
           <div>
-            <p>Reach out by email or the form. Include the best way to reach you and whether you are buying, selling, or exploring options in Modesto or the Central Valley.</p>
+            <p>Email Andrew or use the form. Include the best way to reach you and whether you are buying, selling, renting, or exploring options in Modesto or the Central Valley.</p>
             <ul class="contact-details">
               <li>
                 <strong>Email</strong>
-                <a href="mailto:andrewjamesmartinez91@gmail.com">andrewjamesmartinez91@gmail.com</a>
+                <a href="mailto:andrew.martinez.re@gmail.com">andrew.martinez.re@gmail.com</a>
               </li>
               <li>
-                <strong>Phone</strong>
-                <span>Available upon request — include your number in the form for a callback.</span>
+                <strong>Office mailing</strong>
+                2409 Havertown Pl, Modesto, CA 95358
               </li>
               <li>
                 <strong>Market focus</strong>
@@ -143,7 +287,7 @@
               </li>
             </ul>
           </div>
-          <form class="contact-form" action="https://formsubmit.co/andrewjamesmartinez91@gmail.com" method="POST">
+          <form class="contact-form" action="https://formsubmit.co/andrew.martinez.re@gmail.com" method="POST">
             <input type="hidden" name="_subject" value="New inquiry — Andrew Martinez Real Estate">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="table">
@@ -167,6 +311,7 @@
                 <option value="">Select…</option>
                 <option value="Buying">Buying a home</option>
                 <option value="Selling">Selling my home</option>
+                <option value="Renting">Renting / lease</option>
                 <option value="Valuation">Home valuation</option>
                 <option value="Other">Other / general question</option>
               </select>
@@ -175,7 +320,7 @@
               Message
               <textarea name="message" required placeholder="Tell Andrew about your timeline, area, or property address…"></textarea>
             </label>
-            <button class="btn btn-dark" type="submit">Send message</button>
+            <button class="btn btn-navy" type="submit">Send message</button>
             <p class="form-note">By submitting, you agree to be contacted about your inquiry. This site does not sell your information.</p>
           </form>
         </div>
@@ -183,51 +328,48 @@
     </section>
   </main>
 
-  <footer class="compliance" id="license" aria-labelledby="compliance-heading">
-    <div class="compliance-inner">
-      <h2 id="compliance-heading">License &amp; brokerage disclosure (California)</h2>
-      <p>Information provided for compliance and transparency. Verify license status at the California Department of Real Estate (DRE).</p>
-      <div class="compliance-grid">
-        <div>
-          <h3 style="color:#fff;font-family:var(--font-body);font-size:0.95rem;margin:0 0 0.75rem;">Salesperson — Andrew Martinez</h3>
-          <dl>
-            <dt>Display name</dt>
-            <dd>Andrew Martinez</dd>
-            <dt>Full legal name</dt>
-            <dd>Martinez, Andrew James</dd>
-            <dt>License type</dt>
-            <dd>SALESPERSON</dd>
-            <dt>DRE license #</dt>
-            <dd>02446227</dd>
-            <dt>Expiration</dt>
-            <dd>07/21/30</dd>
-            <dt>Status</dt>
-            <dd>LICENSED</dd>
-            <dt>License issued</dt>
-            <dd>07/22/26</dd>
-            <dt>Former names</dt>
-            <dd>NO FORMER NAMES</dd>
-            <dt>Mailing address</dt>
-            <dd>2409 Havertown Pl, Modesto, CA 95358</dd>
-          </dl>
-        </div>
-        <div>
-          <h3 style="color:#fff;font-family:var(--font-body);font-size:0.95rem;margin:0 0 0.75rem;">Responsible broker — Real Estate Ebroker Inc</h3>
-          <dl>
-            <dt>Broker license ID (DRE #)</dt>
-            <dd>01522411</dd>
-            <dt>Broker address</dt>
-            <dd>950 Boardwalk Ste 203, San Marcos, CA 92078</dd>
-            <dt>Affiliation</dt>
-            <dd>Andrew Martinez is a licensed salesperson affiliated with REeBroker Group / Real Estate Ebroker Inc.</dd>
-          </dl>
-        </div>
+  <footer class="site-footer" id="license" aria-labelledby="footer-heading">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="logo-lockup footer-logo" href="#top">
+          <svg class="logo-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <path d="M4 14L16 4l12 10v14H4V14z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            <rect x="11" y="17" width="10" height="11" stroke="currentColor" stroke-width="1.2" fill="none"/>
+          </svg>
+          <span class="logo-text">
+            Andrew Martinez
+            <span class="logo-tagline">REeBroker Group</span>
+          </span>
+        </a>
+        <p class="footer-tagline">Buy · Sell · Rent across Modesto &amp; the Central Valley.</p>
       </div>
-      <div class="compliance-footer">
-        <span>&copy; <span id="year"></span> Andrew Martinez. All rights reserved.</span>
-        <span>Equal Housing Opportunity. Not intended as legal or tax advice.</span>
-        <a href="#top">Back to top</a>
+      <div class="footer-col">
+        <h2 id="footer-heading" class="footer-title">Quick links</h2>
+        <ul class="footer-links">
+          <li><a href="#top">Home</a></li>
+          <li><a href="#properties">Properties</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
+      <div class="footer-col">
+        <h2 class="footer-title">Get in touch</h2>
+        <ul class="footer-contact">
+          <li><a href="mailto:andrew.martinez.re@gmail.com">andrew.martinez.re@gmail.com</a></li>
+          <li>2409 Havertown Pl<br>Modesto, CA 95358</li>
+        </ul>
+      </div>
+      <div class="footer-col footer-license">
+        <h2 class="footer-title">California DRE</h2>
+        <p><strong>Salesperson</strong> Andrew James Martinez<br>License #02446227<br>2409 Havertown Pl, Modesto, CA 95358</p>
+        <p><strong>Broker</strong> Real Estate Ebroker Inc<br>License #01522411<br>950 Boardwalk Ste 203, San Marcos, CA 92078</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Andrew Martinez. All rights reserved.</span>
+      <span>Equal Housing Opportunity · Not legal or tax advice</span>
+      <a href="#top">Back to top</a>
     </div>
   </footer>
 
